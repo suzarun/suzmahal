@@ -18,7 +18,7 @@ document.getElementById(
 ).style.backgroundImage = `url('${PHOTO_URL}')`;
 document.getElementById(
   "openingMessage"
-).innerHTML = `This monument is for you, <b>${PERSON_NAME}</b> —<br> built from love, light, and my heart.`;
+).innerHTML = `This monument is for you, <b>${PERSON_NAME}</b><br> built from love, light, and my heart.`;
 
 // ===========================
 // SCENE SETUP
