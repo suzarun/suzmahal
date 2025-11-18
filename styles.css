@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle, #0b1220, #05060c 80%);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Opening message */
+#openingMessage {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  color: #dce6ff;
+  font-size: 28px;
+  opacity: 0;
+  animation: fadeInOut 5s forwards;
+  /* fade in and out */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Quote box */
+#quoteBox {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: rgba(50, 80, 150, 0.3);
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: #e7efff;
+  font-size: 20px;
+  border: 1px solid rgba(200, 220, 255, 0.3);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  transition: 0.5s ease;
+  pointer-events: none;
+}
+@media (max-width: 600px) {
+  #quoteBox {
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+#quoteBox.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Photo frame */
+#photoFrame {
+  position: absolute;
+  top: 10%;
+  right: 6%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-image: url("./assets/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 25px rgba(130, 160, 255, 0.7);
+  border: 3px solid rgba(180, 200, 255, 0.5);
+  opacity: 0.85;
+}
